@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- Reset CSS -->
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+        <!-- Font Embed -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Styles -->
+        <link rel="stylesheet" href="./assets/css/styles.css" />
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <div class="container container-header">
+                <div class="header__inner">
+                    <!-- Logo -->
+                    <a href="#!">
+                        <img
+                            src="./assets/img/task-logo.png"
+                            alt=""
+                            class="header__logo"
+                        />
+                    </a>
+                    <!-- Navigation -->
+                    <nav class="navbar">
+                        <ul class="navbar__list">
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link active"
+                                    >Home</a
+                                >
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link">Products</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link">Guidlines</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link">Review</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- CTA -->
+                    <a href="#!" class="btn btn-outline-primary">Sign In</a>
+                </div>
+            </div>
+        </header>
+        <!-- Hero -->
+        <div class="hero">
+            <div class="container container-header">
+                <!-- Hero content -->
+                <section class="hero__content">
+                    <div class="hero__decor">
+                        <div class="hero__circle"></div>
+                        <div class="hero__circle hero__circle--md"></div>
+                        <div class="hero__circle hero__circle--sm"></div>
+                        <div class="hero__circle hero__circle--xs"></div>
+                    </div>
+                    <section class="hero__info">
+                        <h1 class="hero__heading section-heading">
+                            Make
+                            <strong class="hero__strong color-linear">
+                                Management
+                                <span class="hero__point"></span>
+                                <span class="hero__point"></span>
+                                <span class="hero__point"></span>
+                                <span class="hero__point"></span>
+                            </strong>
+                            Way More Easier Than Ever
+                        </h1>
+                        <p class="hero__desc section-desc">
+                            The online collaborative management platform to
+                            bring more efficiency and performace
+                        </p>
+                        <div class="hero__action">
+                            <a href="#!" class="btn btn-primary btn-xl"
+                                >Request Demo</a
+                            >
+                            <a href="#!" class="btn btn-gray btn-xl"
+                                >Contact Us</a
+                            >
+                        </div>
+                    </section>
+                    <div class="hero__decor">
+                        <div class="hero__circle"></div>
+                        <div class="hero__circle hero__circle--md"></div>
+                        <div class="hero__circle hero__circle--sm"></div>
+                        <div class="hero__circle hero__circle--xs"></div>
+                    </div>
+                </section>
+                <!-- Hero media -->
+                <figure class="hero__media">
+                    <div class="hero__dashboard">
+                        <!-- Hero dashboard -->
+                        <div class="hero__inner">
+                            <!-- Sidebar -->
+                            <div class="hero__sidebar">
+                                <div class="hero__row hero__groupbar">
+                                    <img
+                                        class="hero__line"
+                                        src="./assets/icon/bar.svg"
+                                        alt="Line"
+                                    />
+                                    <img
+                                        src="./assets/icon/dashboard.svg"
+                                        alt="Dashboard"
+                                    />
+                                    <p class="hero__dash">Dashboard</p>
+                                </div>
+                                <p class="hero__collect">Collections</p>
+                                <ul class="hero__list">
+                                    <li class="hero__item active">
+                                        <a href="#!" class="hero__link"
+                                            >School</a
+                                        >
+                                    </li>
+                                    <li class="hero__item">
+                                        <a href="#!" class="hero__link"
+                                            >Personal</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Stat -->
+                            <div class="hero__task">
+                                <div class="hero__row">
+                                    <div class="hero__school">
+                                        <button
+                                            type="button"
+                                            class="hero__circle-icon"
+                                        >
+                                            <img
+                                                src="./assets/icon/left-arrow.svg"
+                                                alt="Arrow"
+                                            />
+                                        </button>
+                                        <p class="hero__title">School</p>
+                                    </div>
+                                    <img
+                                        class="hero__dot"
+                                        src="./assets/icon/dot.svg"
+                                        alt="Dot"
+                                    />
+                                    <img
+                                        src="./assets/icon/contact.svg"
+                                        alt="Contact"
+                                    />
+                                </div>
+                                <div class="hero__row hero__stat">
+                                    <div class="hero__list-task">
+                                        <span class="hero__sort">
+                                            <img
+                                                src="./assets/icon/sort-icon.svg"
+                                                alt="Sort"
+                                            />
+                                            Sort
+                                        </span>
+                                        <ul class="hero__checklist">
+                                            <li class="hero__itemcheck">
+                                                <input
+                                                    class="hero__checkbox"
+                                                    type="checkbox"
+                                                    name="task"
+                                                    id="task-1"
+                                                    hidden
+                                                />
+                                                <label
+                                                    for="task-1"
+                                                    class="hero__label"
+                                                    >Finish the Easay
+                                                    collaboration
+                                                </label>
+                                            </li>
+                                            <li class="hero__itemcheck">
+                                                <input
+                                                    class="hero__checkbox"
+                                                    type="checkbox"
+                                                    name="task"
+                                                    id="task-2"
+                                                    hidden
+                                                />
+                                                <label
+                                                    for="task-2"
+                                                    class="hero__label"
+                                                    >Do the math for next
+                                                    monday</label
+                                                >
+                                            </li>
+                                            <li class="hero__itemcheck">
+                                                <input
+                                                    class="hero__checkbox"
+                                                    type="checkbox"
+                                                    name="task"
+                                                    id="task-3"
+                                                    hidden
+                                                />
+                                                <label
+                                                    for="task-3"
+                                                    class="hero__label"
+                                                    >Read the next chapter of
+                                                    the book</label
+                                                >
+                                            </li>
+                                            <li class="hero__itemcheck">
+                                                <input
+                                                    class="hero__checkbox"
+                                                    type="checkbox"
+                                                    name="task"
+                                                    id="task-4"
+                                                    hidden
+                                                />
+                                                <label
+                                                    for="task-4"
+                                                    class="hero__label"
+                                                    >Send the collabaration
+                                                    files to jerusha</label
+                                                >
+                                            </li>
+                                            <li class="hero__itemcheck">
+                                                <input
+                                                    class="hero__checkbox"
+                                                    type="checkbox"
+                                                    name="task"
+                                                    id="task-5"
+                                                    hidden
+                                                />
+                                                <label
+                                                    for="task-5"
+                                                    class="hero__label"
+                                                    >Finish the powerpoint
+                                                    presentation</label
+                                                >
+                                            </li>
+                                            <li class="hero__itemcheck">
+                                                <input
+                                                    class="hero__checkbox--plus"
+                                                    type="checkbox"
+                                                    name="task"
+                                                    id="task-6"
+                                                    hidden
+                                                />
+                                                <label
+                                                    for="task-6"
+                                                    class="hero__label"
+                                                    >Add task</label
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="hero__daily">
+                                        <p class="hero__title">Daily task.</p>
+                                        <figure class="hero__daily-img">
+                                            <img
+                                                src="./assets/img/daily-task.jpg"
+                                                alt="Daily Task"
+                                                class="hero__images"
+                                            />
+                                            <div class="hero__play-icon">
+                                                <img
+                                                    src="./assets/icon/play.svg"
+                                                    alt="Play icon"
+                                                />
+                                            </div>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Hero Collect -->
+                        <div class="hero__summary">
+                            <div class="hero__row">
+                                <p class="hero__collect">Collections</p>
+                                <img src="./assets/icon/dot.svg" alt="Dot" />
+                            </div>
+                            <div class="hero__mission">
+                                <!-- Plan List 1 -->
+                                <article class="hero__plan">
+                                    <div class="hero__block">
+                                        <div class="hero__day">
+                                            <p class="hero__title">School</p>
+                                            <p class="hero__text">
+                                                4 task plus tomorrow.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="hero__row">
+                                        <div class="hero__progress"></div>
+                                        <p class="hero__text">1/3</p>
+                                    </div>
+                                </article>
+                                <!-- Plan List 2 -->
+                                <article class="hero__plan">
+                                    <div class="hero__block">
+                                        <div class="hero__day">
+                                            <p class="hero__title">Personal</p>
+                                            <p class="hero__text">
+                                                1 task plus today.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="hero__row">
+                                        <div class="hero__progress"></div>
+                                        <p class="hero__text">7/10</p>
+                                    </div>
+                                </article>
+                                <!-- Plan List 3 -->
+                                <article class="hero__plan">
+                                    <div class="hero__block">
+                                        <div class="hero__day">
+                                            <p class="hero__title">Design</p>
+                                            <p class="hero__text">
+                                                3 task plus rewt week.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="hero__row">
+                                        <div class="hero__progress"></div>
+                                        <p class="hero__text">0/3</p>
+                                    </div>
+                                </article>
+                                <div class="hero__circle hero__circle-mission"></div>
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+        </div>
+    </body>
+</html>
