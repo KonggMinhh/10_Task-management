@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 :root {
     --primary-color: linear-gradient(90deg, #eb9204, #83e868, #83e868, #eb9204);
     --primary-color-blue: #ae8ff9;
@@ -12,7 +13,6 @@
     --text-color-dark-blue: #272633;
     --text-color-gray-dark: #282c30;
 }
-
 html {
     font-size: 62.5%;
 }
@@ -20,6 +20,20 @@ body {
     font-family: "Sora", sans-serif;
     font-size: 1.6rem;
     background: #131517;
+}
+::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(22, 24, 35, 0.3);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: #fff;
 }
 /* Common */
 a {
@@ -109,7 +123,12 @@ button {
 .container-header {
     --width: 1144px;
 }
-
+.container-service {
+    --width: 1096px;
+}
+.container-task {
+    --width: 1161px;
+}
 .section-heading {
     color: var(--text-color-white);
     font-weight: 700;
@@ -221,6 +240,7 @@ button {
     margin-right: 10px;
     position: relative;
     border: 1px dashed #fff;
+    background-image: linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%);
 }
 
 .hero__point {
@@ -272,6 +292,7 @@ button {
 /* ++++ Hero media ++++ */
 .hero__media {
     margin-top: 111px;
+    padding-bottom: 146px;
 }
 .hero__dashboard {
     position: relative;
@@ -521,7 +542,7 @@ button {
 .hero__plan:nth-child(3) .hero__block::before {
     background: var(--primary-color-green, #0cce84);
 }
-.hero__day .hero__title {
+.hero__body .hero__title {
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 1.2;
@@ -561,4 +582,309 @@ button {
     bottom: 73px;
     left: -46px;
     z-index: -1;
+}
+/* Service */
+.service {
+    margin-top: 140px;
+}
+.service__inner {
+    border-radius: 27px;
+    background: var(--text-color-gray-dark);
+    padding: 71px 50px 53px;
+}
+.service__list {
+    display: flex;
+    column-gap: 142px;
+}
+.service-item {
+    text-align: center;
+}
+.service-item__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: var(--primary-color-green);
+}
+.service-item:first-child,
+.service-item:nth-child(2) {
+    position: relative;
+}
+.service-item:nth-child(2) .service-item__icon {
+    background: var(--primary-color-dark-yellow);
+}
+.service-item:last-child .service-item__icon {
+    background: var(--primary-color-blue);
+}
+.service-item__heading {
+    margin-top: 30px;
+    font-size: 2.2rem;
+    line-height: 32px;
+    font-weight: 600;
+    color: var(--text-color-white);
+}
+.service-item__desc {
+    margin-top: 5px;
+    line-height: 26px;
+    color: var(--text-color-gray);
+}
+.service-item__dash {
+    width: 195px;
+    top: 31px;
+    right: -166px;
+    position: absolute;
+    border: 1px dashed var(--text-color-gray);
+}
+/* ======== Task =========== */
+.task {
+    margin-top: 140px;
+}
+.task__inner {
+    display: flex;
+    column-gap: 64px;
+}
+.task__content {
+    width: 46%;
+}
+.task__heading {
+    width: 368px;
+    margin-bottom: 22px;
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+.task__emphasis {
+    background-image: linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%);
+}
+.task__countdown {
+    width: 430px;
+    position: relative;
+    margin-top: 86px;
+    display: flex;
+    column-gap: 17px;
+}
+.task__countdown-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 132px;
+    min-height: 127px;
+    padding: 0 21px;
+    border-radius: 9px;
+    background: var(--text-color-dark-blue);
+    text-align: center;
+}
+.task__countdown-item:nth-of-type(2) {
+    margin-top: 28px;
+}
+.task__countdown-item.active {
+    background: linear-gradient(
+        191.94deg,
+        #c4f566 -43.72%,
+        #ae8ef9 -5.87%,
+        #ef8f00 52.36%,
+        #61e559 122.78%
+    );
+}
+
+.task__countdown-number {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--text-color-white);
+}
+.task__countdown-item.active .task__countdown-text {
+    color: var(--text-color-white);
+}
+.task__countdown-text {
+    margin-top: 16px;
+    font-size: 1.6rem;
+    line-height: 26px;
+    color: var(--text-color-gray);
+}
+.task__dots {
+    position: absolute;
+    display: flex;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+}
+.task__dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--text-color-dark-blue);
+    cursor: pointer;
+}
+.task__dot.active {
+    background: var(--primary-color-dark-yellow);
+    cursor: default;
+}
+
+.task__media {
+    position: relative;
+    flex: 1;
+}
+.task__dash {
+    --width: 455px;
+    --height: 455px;
+    position: absolute;
+    inset: 0;
+    margin: 0 auto;
+    width: var(--width);
+    height: var(--height);
+    border: 2px dashed #2f2f2f;
+    border-radius: 50%;
+}
+.task__dash--sm {
+    --width: 336px;
+    --height: 336px;
+    inset: 0;
+    margin: auto;
+}
+.task__circle {
+    --width: 209px;
+    --height: 209px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: var(--width);
+    height: var(--height);
+    border-radius: 50%;
+    background: rgba(106, 234, 92, 0.5);
+}
+.task__circle--sm {
+    --width: 135px;
+    --height: 134px;
+    inset: 0;
+    margin: auto;
+    background: #6aea5c;
+}
+.task__rectangle {
+    position: absolute;
+    display: inline-block;
+    width: 150px;
+    height: 200px;
+    transform: rotate(11.592deg);
+    background: #191b1d;
+    z-index: -1;
+}
+.task__rectangle:first-of-type {
+    top: 23px;
+    left: 43px;
+}
+.task__rectangle:nth-of-type(2) {
+    left: 0;
+    bottom: 66px;
+}
+.task__rectangle:nth-of-type(3) {
+    top: 0;
+    right: 156px;
+    bottom: 299px;
+}
+.task__rectangle:nth-of-type(4) {
+    top: 90px;
+    right: 0;
+}
+.task__rectangle:nth-of-type(5) {
+    bottom: 0;
+    right: 52px;
+}
+.task__rectangle:last-of-type {
+    bottom: 88px;
+    right: 202px;
+}
+.task__badge {
+    position: absolute;
+    padding: 11px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: #27292c;
+}
+.task__badge:first-child {
+    column-gap: 45px;
+    top: 62px;
+    left: 0;
+}
+.task__badge:nth-child(2) {
+    column-gap: 38px;
+    top: 55px;
+    right: 43px;
+}
+.task__badge:nth-child(3) {
+    top: 318px;
+    left: -43px;
+}
+.task__badge:last-child {
+    column-gap: 67px;
+    top: 392px;
+    right: 28px;
+}
+.task__badge-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: transparent;
+    background-image: linear-gradient(89.86deg, #ef8f00 -6.27%, #ff7667 90.08%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.task__badge:nth-child(2) .task__badge-title {
+    background-image: linear-gradient(89.93deg, #0cce84 3.45%, #ae8ef9 99.07%);
+}
+.task__badge:nth-child(3) .task__badge-title {
+    margin-left: 15px;
+    margin-right: 43px;
+    background-image: linear-gradient(
+        92.64deg,
+        #c4f566 -11.2%,
+        #ff6e6e 123.12%
+    );
+}
+.task__badge:last-child .task__badge-title {
+    background-image: linear-gradient(
+        92.64deg,
+        #c4f566 -11.2%,
+        #ff6e6e 123.12%
+    );
+}
+.task__badge-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #363a3e;
+}
+.task__avatar-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid transparent;
+}
+.task__avatar-img:first-child {
+    border-image-source: linear-gradient(
+            90.86deg,
+            #c531f9 -1.74%,
+            rgba(221, 64, 111, 0.7814) 20.38%,
+            rgba(120, 120, 120, 0) 99.45%
+        )
+        border-box;
+}
+.task__avatar-img:nth-child(2) {
+    background: linear-gradient(
+            96.04deg,
+            #6aea5c 2.41%,
+            rgba(219, 125, 96, 0.86475) 18.84%,
+            rgba(120, 120, 120, 0) 123.85%
+        )
+        border-box;
 }
