@@ -81,6 +81,12 @@ button {
     border: 1px solid var(--text-color-dark-blue);
     color: transparent;
     background-image: var(--primary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.btn-outline-gray {
+    border: 1px solid #36383e;
+    color: transparent;
     background-image: var(--primary-color);
     background-clip: text;
     -webkit-background-clip: text;
@@ -110,12 +116,16 @@ button {
     --height: 54px;
 }
 .btn-lg {
+    --width: 218px;
+    --height: 68px;
+}
+.btn-md {
     --width: 129px;
     --height: 37px;
 }
+
 .color-linear {
     color: transparent;
-    background-image: var(--primary-color);
     background-image: var(--primary-color);
     background-clip: text;
     -webkit-background-clip: text;
@@ -130,6 +140,7 @@ button {
 .container-header {
     --width: 1144px;
 }
+.container-teamwork,
 .container-about,
 .container-service {
     --width: 1096px;
@@ -142,7 +153,7 @@ button {
 }
 .section-heading {
     color: var(--text-color-white);
-    font-weight: 700;
+    font-weight: 600;
 }
 .section-desc {
     color: var(--text-color-gray);
@@ -659,7 +670,6 @@ button {
     margin-top: 30px;
     font-size: 2.2rem;
     line-height: 32px;
-    font-weight: 600;
     color: var(--text-color-white);
 }
 .service-item__desc {
@@ -689,7 +699,6 @@ button {
     width: 368px;
     margin-bottom: 22px;
     font-size: 4rem;
-    font-weight: 600;
     line-height: 1.25;
 }
 .task__emphasis {
@@ -988,7 +997,6 @@ button {
 .featured__heading {
     max-width: 399px;
     font-size: 4rem;
-    font-weight: 600;
     line-height: 50px;
 }
 .featured__checklist {
@@ -1064,7 +1072,7 @@ button {
     background: #c3ae90;
     top: 110px;
     left: -71px;
-    color: #f9f9f9;
+    color: var(--text-color-white);
     font-size: 1.2rem;
     font-weight: 500;
     padding: 12px 33px;
@@ -1136,7 +1144,6 @@ button {
     max-width: 497px;
     margin: 0 auto;
     font-size: 4rem;
-    font-weight: 600;
     line-height: 50px;
     text-align: center;
 }
@@ -1157,11 +1164,11 @@ button {
     align-items: center;
     column-gap: 18px;
     padding: 12px 20px;
-    background: #282c30;
+    background: var(--text-color-gray-dark);
     border-radius: 23px;
 }
 .about__action {
-    color: #858b93;
+    color: var(--text-color-gray);
     font-size: 1.4rem;
 }
 
@@ -1517,4 +1524,108 @@ button {
 .about__btn {
     margin-top: 33px;
     font-size: 1.2rem;
+}
+/* ========= Teamwork ============== */
+.teamwork {
+    margin-top: 140px;
+}
+.teamwork__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.teamwork__heading {
+    max-width: 493px;
+    color: var(--text-color-white);
+    font-size: 4rem;
+    line-height: 50px;
+}
+.teamwork__strong {
+    background-image: linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%),
+        linear-gradient(0deg, #f9f9f9, #f9f9f9),
+        linear-gradient(0deg, #f9f9f9, #f9f9f9);
+}
+.teamwork__btn {
+    font-size: 1.8rem;
+    line-height: 18px;
+    font-weight: 600;
+}
+.teamwork__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 55px;
+    margin-top: 23px;
+}
+.teamwork__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+.teamwork__item {
+    padding: 29px 65px 37px 40px;
+    border-radius: 15px;
+    border: 2px solid var(--text-color-gray-dark);
+    transition: background-color 0.2s ease;
+}
+.teamwork__item:hover {
+    background-color: var(--text-color-gray-dark);
+}
+.teamwork__title {
+    position: relative;
+    display: inline-block;
+    color: var(--text-color-white);
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+.teamwork__desc {
+    margin-top: 9px;
+    color: var(--text-color-gray);
+    font-size: 1.6rem;
+    line-height: 24px;
+}
+.teamwork__title::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    top: 15px;
+    right: -12px;
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color-dark-yellow);
+    border-radius: 50%;
+}
+.teamwork__item:nth-last-child(2) .teamwork__title::after {
+    background: var(--primary-color-green);
+}
+.teamwork__item:last-child .teamwork__title::after {
+    background: var(--primary-color-dark-orange);
+}
+.teamwork__media {
+    flex: 0;
+}
+.teamwork__img {
+    width: 348px;
+    height: 264px;
+    object-fit: cover;
+    border-radius: 31px;
+    border: 3px solid transparent;
+    background: linear-gradient(
+        113.43deg,
+        #6aea5c -12.63%,
+        #fd7566 36.24%,
+        #ef8f00 106.23%
+    );
+}
+.teamwork__img:first-child {
+    position: relative;
+    z-index: -1;
+}
+.teamwork__img:nth-child(2) {
+    margin-top: -103px;
+    margin-left: 200px;
+}
+.teamwork__img:last-child {
+    margin-top: -72px;
+    margin-left: 25px;
 }
