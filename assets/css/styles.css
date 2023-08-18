@@ -2067,6 +2067,9 @@ body:has(#review:target) .header__pc-menu-drawer {
     border: 1px solid #282c30;
     border-radius: 10px;
     background-color: var(--bgc, transparent);
+    width: var(--w);
+    flex: 1 0 auto;
+    --scale-hover: 0;
     transition: all 0.5s ease;
 }
 .testimonial__icon {
@@ -2109,10 +2112,7 @@ body:has(#review:target) .header__pc-menu-drawer {
 .testimonial__stars {
     color: var(--text-color-stars, var(--text-color-gray));
 }
-.testimonial__item {
-    width: var(--w);
-    flex: 1 0 auto;
-}
+
 .testimonial__item--preview {
     --text-color-quote: var(--text-color-quote-hover, var(--text-color-white));
     --text-color-name: var(--text-color-name-hover, var(--text-color-white));
